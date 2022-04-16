@@ -1,0 +1,51 @@
+body{
+	text-align:center;
+    background-color: black;
+    color: white;
+}
+body, #shuffle{
+	font-family: 'Cinzel', serif;
+	font-size:14pt;
+}
+div.center {
+    margin: auto
+}
+
+div.Bar {
+    color: white;
+    text-align: right;
+}
+
+a {
+    color: white;
+}
+
+#puzzleGrid{
+	width:400px;
+	height:400px;
+	position:relative;
+	margin:0px auto;
+}
+.box{
+	width:96px;
+	height:96px;
+    color: cyan;
+	border:2px solid black;
+	font-size:40pt;
+	position:absolute;
+	cursor:default;
+	background-image: url(https://www.wallpapertip.com/wmimgs/67-677900_aesthetic-desktop-wallpaper-4k.jpg);
+}
+
+#solved{
+	animation:blinkingText 1.2s infinite;
+	font-weight:bold;
+}
+
+@keyframes blinkingText{
+    0%{     color: white;}
+    49%{    color: white;}
+    60%{    color: red;}
+    99%{    color: red;}
+    100%{   color: black;}
+}
