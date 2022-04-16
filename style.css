@@ -1,6 +1,7 @@
 body{
 	text-align:center;
-    background-color: black;
+    background: linear-gradient(to bottom left, cyan, black, black, rgb(114, 205, 235), black, black, white);
+    background-attachment: fixed;
     color: white;
 }
 body, #shuffle{
@@ -8,7 +9,13 @@ body, #shuffle{
 	font-size:14pt;
 }
 div.center {
-    margin: auto
+	padding-top: 50px;
+	width:500px;
+	height: 500px;
+	background-color: black;
+    margin: auto;
+	border-radius: 50px;
+	box-shadow: 2px 2px 8px 8px rgba(41, 41, 41, 0.582);
 }
 
 div.Bar {
@@ -18,6 +25,10 @@ div.Bar {
 
 a {
     color: white;
+}
+
+hr {
+	width: 800px;
 }
 
 #puzzleGrid{
@@ -35,6 +46,25 @@ a {
 	position:absolute;
 	cursor:default;
 	background-image: url(https://www.wallpapertip.com/wmimgs/67-677900_aesthetic-desktop-wallpaper-4k.jpg);
+}
+
+button {
+	width: 120px;
+	background-color: white;
+	border: none;
+	padding: 9px;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 8px;
+}
+
+button:hover {
+	width: 130px;
+	background-color: aqua;
+	border: none;
+	padding: 12px;
+	display: inline-block;
+	border-radius: 8px;
 }
 
 #solved{
