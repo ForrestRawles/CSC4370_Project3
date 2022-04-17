@@ -5,7 +5,6 @@ body{
     color: white;
 }
 body, #shuffle{
-	font-family: 'Cinzel', serif;
 	font-size:14pt;
 }
 div.center {
@@ -42,7 +41,7 @@ hr {
 	height:96px;
     color: cyan;
 	border:2px solid black;
-	font-size:40pt;
+	font-size:32pt;
 	position:absolute;
 	cursor:default;
 	background-image: url(https://www.wallpapertip.com/wmimgs/67-677900_aesthetic-desktop-wallpaper-4k.jpg);
