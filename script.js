@@ -92,8 +92,7 @@
 	function boxHighlight(thisPiece){
         thisPiece.value = true;
         thisPiece.style.cursor = "pointer";
-		thisPiece.style.color = "red";
-        thisPiece.style.border = "2px solid red";
+        thisPiece.style.border = "2px solid cyan";
 	}
     //function that is called when a piece of the puzzle is moved to determine if the puzzle is complete
 	function checkSolved(){

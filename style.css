@@ -60,7 +60,6 @@ button {
 
 button:hover {
 	width: 130px;
-	background-color: aqua;
 	border: none;
 	padding: 12px;
 	display: inline-block;
@@ -75,7 +74,7 @@ button:hover {
 @keyframes blinkingText{
     0%{     color: white;}
     49%{    color: white;}
-    60%{    color: red;}
-    99%{    color: red;}
-    100%{   color: black;}
+    60%{    color: cyan;}
+    99%{    color: cyan;}
+    100%{   color: white;}
 }
