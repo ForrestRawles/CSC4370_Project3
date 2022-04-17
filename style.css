@@ -4,9 +4,11 @@ body{
     background-attachment: fixed;
     color: white;
 }
-body, #shuffle{
+
+body {
 	font-size:14pt;
 }
+
 div.center {
 	padding-top: 50px;
 	width:500px;
@@ -14,7 +16,7 @@ div.center {
 	background-color: black;
     margin: auto;
 	border-radius: 50px;
-	box-shadow: 2px 2px 8px 8px rgba(41, 41, 41, 0.582);
+	box-shadow: 5px 10px 8px 8px rgba(41, 41, 41, 0.582);
 }
 
 div.Bar {
@@ -52,17 +54,13 @@ button {
 	background-color: white;
 	border: none;
 	padding: 9px;
-	display: inline-block;
-	font-size: 16px;
+	font-size: 12pt;
 	border-radius: 8px;
+	box-shadow: 2px 4px 4px rgba(155, 148, 148, 0.726);
 }
 
 button:hover {
-	width: 130px;
-	border: none;
-	padding: 12px;
-	display: inline-block;
-	border-radius: 8px;
+	font-size: 14pt;
 }
 
 #solved{
