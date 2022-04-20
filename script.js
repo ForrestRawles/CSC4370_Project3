@@ -51,8 +51,10 @@
 		emptyY = y;
 	}
 	//function used during shuffle and normal game play to move a piece of the puzzle
+	var num_guess = 0;
 	function movePiece(thisPiece){
 		if (thisPiece.value === true){ 
+			num_guess += 1
 			//place current X & Y values in temporary variables
 			var tempX = parseInt(thisPiece.style.left);
 			var tempY = parseInt(thisPiece.style.top);
@@ -68,6 +70,7 @@
 			if (solvable === true){
 				checkSolved();
 			}
+			document.getElementById("guesses").innerHTML=`Moves: ${num_guess-1000}`;
 		}
 	}
 	//tests to see if the current piece can be moved by calling functions to determine if it neighbors the empty space
@@ -119,7 +122,7 @@
 		}
 		//if the puzzle is complete, the win message is displayed, and the number of wins is increased by one and added to local storage
 		if (complete == totalBoxes){
-			document.getElementById("solved").innerHTML = "Congratulations! You Solved the Puzzle!<br>Press the Suffle Button to Play Again.";
+			document.getElementById("solved").innerHTML = "Congratulations! You Solved the Puzzle!<br>Press the Shuffle Button to Play Again.";
 		} else{
 			//win message is cleared if displayed, or nothing is added if not won
 			document.getElementById("solved").innerHTML = "";
@@ -165,9 +168,37 @@
 		solvable = true;
 	}
     //adds functionality to the shuffle button, calls the boardShuffle function when clicked
+	var currentTimer;
 	function shuffleButton(){
 		var button = document.getElementById("shuffle");
-		button.onclick = boardShuffle;
+		button.onclick = () => {
+			if (currentTimer) {
+				clearInterval(currentTimer)
+				document.getElementById('time_limit').innerHTML = `Remaining Time: 120 seconds`;
+			};
+			if (num_guess) {
+				num_guess = 0;
+				document.getElementById("guesses").innerHTML=`Moves: ${num_guess}`;
+			}
+			boardShuffle();
+			var timeLeft = 119;
+			currentTimer = setInterval(() => {
+				document.getElementById('music_sound').muted = false;
+				document.getElementById('music_sound').play();
+				if (timeLeft <= 0) {
+					document.getElementById('music_sound').muted = true;
+					clearInterval(currentTimer);
+					timeLeft = 120;
+					document.getElementById('time_limit').innerHTML = "You have run out of time!";
+					// Do something here
+				} else {
+					// Update timer
+					document.getElementById('time_limit').innerHTML = `Remaining Time: ${timeLeft} seconds`;
+					timeLeft -= 1;
+				}
+			}, 1000);
+		};
+		
 	}
 	//assigns functionality to the drop down list of background choices, and calls function to change background when a new item is chosen
 	function backgroundSelector(){
@@ -195,5 +226,4 @@
 		}
 	}
 
-	
 })();
