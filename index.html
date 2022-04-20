@@ -30,12 +30,24 @@
     <div class = "center">
         <div id="puzzleGrid"></div>
         <p>
+            <button onClick= "window.location.reload()">Solve</button>
+        </p>
+        <p>
             <button id="shuffle" >Shuffle</button>
         </p>
     </div>  
+
+
     <br>
     <div id="solved"></div>
-    
+    <p id='guesses'>Moves: 0</p>
+    <p id='time_limit'>Remaining Time: 120 seconds</p>
+
+    <audio id='music_sound' hidden loop autoplay>
+        <source src="music.mp3" type="audio/mp3">
+      </audio>
+
     <script src="script.js"></script>
 </body>
 </html>
+
