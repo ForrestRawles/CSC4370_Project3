@@ -7,17 +7,31 @@
 </head>
 <body>
     <div class = "Bar">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="https://github.com/ForrestRawles/CSC4370_Project3">Github</a>
         <a>Youtube</a>
     </div>
 
+    
     <h1>Fifteen Puzzle</h1>
     <hr>
     <p>
         The goal of the 15 Puzzle is to un-jumble its 15 squares by repeatedly making moves that slides squares into the empty space.
         <br>How quickly can you solve it?
     </p>
+    <p id='guesses'>Moves: 0</p>
+    <p id='time_limit'>Remaining Time: 120 seconds</p>
+    <div class = "center">
+        <div id="puzzleGrid"></div>
+        <p>
+            <button id="shuffle" >Shuffle</button>
+            <button onClick = "window.location.reload()" >Solve</button>
+        </p>
+    </div>  
+    <br>
+    <div id="solved"></div>
+    <br>
     Background Image:
     <select id="background">
         <option value='https://www.wallpapertip.com/wmimgs/67-677900_aesthetic-desktop-wallpaper-4k.jpg'>Neon Sun</option>
@@ -26,22 +40,13 @@
         <option value='imgs/Gyarados.jpg'>Gyarados</option>
         <option value='imgs/Elden_Ring.jpg'>Elden Ring</option>
     </select>
-    <br><br>
-    <div class = "center">
-        <div id="puzzleGrid"></div>
-        <p>
-            <button onClick= "window.location.reload()">Solve</button>
-        </p>
-        <p>
-            <button id="shuffle" >Shuffle</button>
-        </p>
-    </div>  
-
-
-    <br>
-    <div id="solved"></div>
-    <p id='guesses'>Moves: 0</p>
-    <p id='time_limit'>Remaining Time: 120 seconds</p>
+    <br><br><hr>
+    <p>
+        American puzzle author and Mathamatic Sam Loyd is often falsely credited with creating the puzzle; indeed,
+        <br>Loyd claimed in 1891 unti his death in 1911 that he invented it. The puzzlewas actually created around 1874
+        <br>by  Nayes Palmer Chapman, a postmaster in Canastota, New York.
+    </p>
+    
 
     <audio id='music_sound' hidden loop autoplay>
         <source src="music.mp3" type="audio/mp3">

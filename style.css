@@ -13,7 +13,7 @@ body {
 div.center {
 	padding-top: 50px;
 	width:500px;
-	height:550px;
+	height: 500px;
 	background-color: black;
     margin: auto;
 	border-radius: 50px;
@@ -89,4 +89,3 @@ button:hover {
     99%{    color: cyan;}
     100%{   color: white;}
 }
-
